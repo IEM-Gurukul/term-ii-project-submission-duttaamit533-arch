@@ -21,6 +21,16 @@ public class ConsoleUI {
 
             System.out.print("Enter choice: ");
             int choice = scanner.nextInt();
+int choice;
+
+try {
+    choice = scanner.nextInt();
+    scanner.nextLine(); // clear buffer
+} catch (Exception e) {
+    System.out.println("Invalid input! Please enter a number.");
+    scanner.nextLine(); // clear wrong input
+    continue;
+}
             scanner.nextLine(); // clear buffer
 
             switch (choice) {
